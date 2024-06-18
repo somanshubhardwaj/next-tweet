@@ -14,7 +14,7 @@ const handler = async (req: VercelRequest, res: VercelResponse) => {
     res.status(tweet ? 200 : 404).json({ data: tweet ?? null })
   } catch (error) {
     console.error(error)
-    res.status(400).json({ error: error.message ?? 'Bad request.' })
+    res.status(400).json({ error: String ?? 'Bad request.' })
   }
 }
  
